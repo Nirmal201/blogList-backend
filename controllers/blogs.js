@@ -6,13 +6,6 @@ blogRouter.get("/", (request, response) => {
     response.json(blogs.map((blog) => blog.toJSON()));
   });
 });
-
-// blogRouter.get("/", (request, response) => {
-//   Blog.find({}).then((blogs) => {
-//     response.json(blogs);
-//   });
-// });
-
 blogRouter.post("/", (request, response) => {
   const body = request.body;
   console.log(body);

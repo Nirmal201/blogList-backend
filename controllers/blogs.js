@@ -43,7 +43,7 @@ blogRouter.put("/:id", (request, response, next) => {
 
   Blog.findByIdAndUpdate(request.params.id, blog, { new: true })
     .then((updatedBlog) => {
-      response.json(updatedNote.toJSON());
+      response.json(updatedBlog.toJSON());
     })
     .catch((error) => next(error));
 });

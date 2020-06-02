@@ -93,6 +93,19 @@ test("fails with status 400, title and url properties undefined", async () => {
   expect(blogsAtEnd.length).toBe(helper.initialBlogs.length);
 });
 
+test("deletion of blog", async () => {
+  const blogsAtStart = await helper.blogsInDb();
+  const blogToDelete = blogsAtStart[0];
+
+  await api.delete(`/api/blogs/${blogToDelete.id}`).expect(204);
+
+  const blogAtEnd = await helper.blogsInDb();
+  expect(blogAtEnd).toHaveLength(helper.initialBlogs.length - 1);
+
+  const title = blogAtEnd.map((b) => b.title);
+  expect(title).not.toContain(blogToDelete.title);
+});
+
 afterAll(() => {
   mongoose.connection.close();
 });

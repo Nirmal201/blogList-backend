@@ -1,9 +1,10 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im5pcm1hbCIsImlkIjoiNWVkYTc4MTQ3ZDgxNjY4Y2M3M2JhMzA0IiwiaWF0IjoxNTkxNDIxMDIzfQ.1FGBGAhY4ITmXLZ-XqxhMP6woc6Zlx3_OYPcZbd7QCg
 
 {
-  "title": "Second Blog",
-  "author": "Steve",
-  "url": "https://apple.com",
-  "likes": 5
+  "title": "four",
+  "author": "nirmal patel",    
+  "url": "https://fullstackopen.com/en/part4/token_authentication",
+  "likes": 121
 }

@@ -41,6 +41,7 @@ blogRouter.post("/", async (request, response) => {
   const savedBlog = await blog.save();
   user.blogs = user.blogs.concat(savedBlog._id);
   await user.save();
+  savedBlog.user = user; // User object is sent when new blog is created.
   response.json(savedBlog.toJSON());
 });
 

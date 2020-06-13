@@ -1,13 +1,13 @@
 ### delete...
 DELETE http://localhost:3001/api/notes/5dbfeba6117b9f1ecc3fb2b6
 ### signup
-POST http://localhost:3003/api/users
+POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-  "username":"sahilrajput03",
-  "name":"Sahil Rajput",
-  "password":"1234k5"
+  "username":"nirmal",
+  "name":"Nirmal",
+  "password":"123"
 }
 ### login
 post http://localhost:3003/api/login
